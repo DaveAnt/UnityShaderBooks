@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 1838242754}
   - component: {fileID: 1838242753}
   - component: {fileID: 1838242759}
-  - component: {fileID: 1838242760}
+  - component: {fileID: 1838242761}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -949,24 +949,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motionBlurShader: {fileID: 4800000, guid: 2bdd34d1e30b64b66a978b6f1a75c606, type: 3}
-  blurAmount: 0.5
---- !u!114 &1838242760
-MonoBehaviour:
+  blurAmount: 0.9
+  blurSpeed: 3
+--- !u!111 &1838242761
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838242752}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 131048bc4f9714798b11c61e7521016f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  startPoint: {x: -5, y: 1, z: -8}
-  endPoint: {x: 5, y: 1, z: -8}
-  lookAt: {x: -1.25, y: 1, z: -2}
-  pingpong: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 015fc5b163d01284c80febf1132cc917, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 015fc5b163d01284c80febf1132cc917, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1864009264
 GameObject:
   m_ObjectHideFlags: 0

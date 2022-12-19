@@ -55,8 +55,8 @@ Shader "Unity Shaders Book/Chapter 12/Gaussian Blur" {
 			fixed3 sum = tex2D(_MainTex, i.uv[0]).rgb * weight[0];
 			
 			for (int it = 1; it < 3; it++) {
-				sum += tex2D(_MainTex, i.uv[it*2-1]).rgb * weight[it];
-				sum += tex2D(_MainTex, i.uv[it*2]).rgb * weight[it];
+				sum += tex2D(_MainTex, i.uv[it*2-1]).rgb * weight[it];// 1  3
+				sum += tex2D(_MainTex, i.uv[it*2]).rgb * weight[it];// 2  4
 			}
 			
 			return fixed4(sum, 1.0);
@@ -82,7 +82,7 @@ Shader "Unity Shaders Book/Chapter 12/Gaussian Blur" {
 			
 			CGPROGRAM  
 			
-			#pragma vertex vertBlurHorizontal  
+			#pragma vertex vertBlurHorizontal
 			#pragma fragment fragBlur
 			
 			ENDCG

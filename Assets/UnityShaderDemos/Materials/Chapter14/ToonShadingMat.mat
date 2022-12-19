@@ -2,14 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ToonShadingMat
   m_Shader: {fileID: 4800000, guid: bc10866917221450f90d19150011bad9, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -59,6 +60,7 @@ Material:
         m_Texture: {fileID: 2800000, guid: f628a9d765d21417995f27cbf8e44c2c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -68,9 +70,9 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.04
+    - _Outline: 0.009
     - _Parallax: 0.02
-    - _SpecularScale: 0.0182
+    - _SpecularScale: 0.0438
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
@@ -79,3 +81,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0.2205882, g: 0.2205882, b: 0.2205882, a: 1}
     - _Specular: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

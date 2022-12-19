@@ -41,8 +41,8 @@ Shader "Unity Shaders Book/Chapter 13/Motion Blur With Depth Texture" {
 		fixed4 frag(v2f i) : SV_Target {
 			// Get the depth buffer value at this pixel.
 			float d = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv_depth);
-			// H is the viewport position at this pixel in the range -1 to 1.
-			float4 H = float4(i.uv.x * 2 - 1, i.uv.y * 2 - 1, d * 2 - 1, 1);
+			// H is the viewport position at this pixel in the range -1 to 1. NDC空间
+			float4 H = float4(i.uv.x * 2 - 1, i.uv.y * 2 - 1, d * 2 - 1, 1); 
 			// Transform by the view-projection inverse.
 			float4 D = mul(_CurrentViewProjectionInverseMatrix, H);
 			// Divide by w to get the world position. 
@@ -66,7 +66,7 @@ Shader "Unity Shaders Book/Chapter 13/Motion Blur With Depth Texture" {
 				c += currentColor;
 			}
 			c /= 3;
-			
+
 			return fixed4(c.rgb, 1.0);
 		}
 		

@@ -72,7 +72,7 @@ Shader "Unity Shaders Book/Chapter 10/Glass Refraction" {
 				return o;
 			}
 			
-			fixed4 frag (v2f i) : SV_Target {		
+			fixed4 frag (v2f i) : SV_Target {
 				float3 worldPos = float3(i.TtoW0.w, i.TtoW1.w, i.TtoW2.w);
 				fixed3 worldViewDir = normalize(UnityWorldSpaceViewDir(worldPos));
 				
@@ -82,7 +82,7 @@ Shader "Unity Shaders Book/Chapter 10/Glass Refraction" {
 				// Compute the offset in tangent space
 				float2 offset = bump.xy * _Distortion * _RefractionTex_TexelSize.xy;
 				i.scrPos.xy = offset * i.scrPos.z + i.scrPos.xy;
-				fixed3 refrCol = tex2D(_RefractionTex, i.scrPos.xy/i.scrPos.w).rgb;
+				fixed3 refrCol = tex2D(_RefractionTex,i.scrPos.xy/i.scrPos.w).rgb;
 				
 				// Convert the normal to world space
 				bump = normalize(half3(dot(i.TtoW0.xyz, bump), dot(i.TtoW1.xyz, bump), dot(i.TtoW2.xyz, bump)));

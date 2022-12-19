@@ -45,14 +45,12 @@ public class Bloom : PostEffectsBase {
 				
 				// Render the vertical pass
 				Graphics.Blit(buffer0, buffer1, material, 1);
-				
 				RenderTexture.ReleaseTemporary(buffer0);
 				buffer0 = buffer1;
 				buffer1 = RenderTexture.GetTemporary(rtW, rtH, 0);
 				
 				// Render the horizontal pass
 				Graphics.Blit(buffer0, buffer1, material, 2);
-				
 				RenderTexture.ReleaseTemporary(buffer0);
 				buffer0 = buffer1;
 			}

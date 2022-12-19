@@ -56,7 +56,7 @@ Shader "Unity Shaders Book/Chapter 11/Image Sequence Animation" {
 //				half2 uv = float2(i.uv.x /_HorizontalAmount, i.uv.y / _VerticalAmount);
 //				uv.x += column / _HorizontalAmount;
 //				uv.y -= row / _VerticalAmount;
-				half2 uv = i.uv + half2(column, -row);
+				half2 uv = i.uv;
 				uv.x /=  _HorizontalAmount;
 				uv.y /= _VerticalAmount;
 				
